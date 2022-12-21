@@ -1,96 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html,
 body {
-    font-family: 'Fira Mono', monospace;
+  background: #070813;
+  color: #fff;
 
-    width: 100%;
-    height: 100%;
+  background-image: radial-gradient(#ffffff22 1px, transparent 0);
+  background-size: 100px 100px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    background: #000;
-    color: #fff;
-    text-align: left;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Epilogue', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+div#app {
+  background-color: #0d0f24aa;
+  border: 1px solid #ffffff22;
+  border-radius: 5px;
+  padding: 15px;
+  width: 512px;
 }
 
-#app {
-    background: url(/image/background.jpg);
-    background-position: center;
-    background-size: cover;
+div#app span {
+  font-size: small;
+  font-weight: normal;
 
-    width: 100%;
-    height: calc(100% - 100px);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  color: #aaa;
 }
 
-#app div p {
-    background: #000;
-    margin-bottom: 10px;
-    padding: 4px 6px 4px 6px;
+div#app p {
+  margin: 5px;
+  margin-left: 0;
 }
 
-#app div a {
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    display: inline-block;
-    text-decoration: none;
-    padding: 2px 4px 2px 4px;
+div#links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#app div a:hover {
-    background: #000;
+div#links a {
+  margin: 5px;
 }
 
-#app #discord {
-    background: #000;
-    padding: 10px;
+div#links a svg {
+  fill: #fff;
 }
 
-#app #discord img {
-    width: 256px;
-    height: 256px;
-
-    object-fit: cover;
-    border-bottom: 4px solid #fff;
+div#discord-about,
+div#discord-spotify {
+  background-color: #131735aa;
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-#app #discord h1 {
-    font-size: 24px;
+img {
+  border-radius: 5px;
+
+  width: 128px;
+  height: 128px;
+
+  object-fit: cover;
+}
+
+div#discord-about img {
+  border-bottom: 8px solid;
+  margin-right: 5px;
+}
+
+div#discord-about h1,
+div#discord-about p {
+  margin: 5px;
+  margin-bottom: 0;
+
+  word-break: break-all;
+}
+
+div#discord-about p {
+  margin-top: 0;
+}
+
+div#discord-spotify {
+  display: none;
+  margin-top: 10px;
+}
+
+div#discord-spotify div {
+  width: 100%;
+}
+
+div#discord-spotify h1,
+div#discord-spotify p {
+  margin: 5px;
+  margin-bottom: 0;
+
+  word-break: break-all;
+}
+
+div#discord-spotify p {
+  margin-top: 0;
+}
+
+span#spotify-bar {
+  margin: 5px;
+  margin-top: 45px;
+
+  width: calc(100% - 20px);
+  height: 5px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span#spotify-bar p {
+  margin: 0;
+  margin-top: 30px;
+  color: #fff;
 }
 
 @media (max-width: 640px) {
-    #app {
-        background: none;
+  h1 {
+    font-size: larger;
+  }
 
-        width: auto;
-        height: auto;
+  p {
+    font-size: 14px;
+  }
 
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 
-    #app div p {
-        padding: 0;
-    }
+  img {
+    width: 96px;
+    height: 96px;
+  }
 
-    #app #discord {
-        display: none;
-    }
+  div#discord-about img {
+    border-bottom: 4px solid;
+  }
 
-    #app div a:hover {
-        text-decoration: underline;
-    }
+  span#spotify-bar {
+    margin-top: 10px;
+  }
+
+  span#spotify-bar p:last-child {
+    display: none;
+  }
 }

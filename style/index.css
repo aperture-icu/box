@@ -115,7 +115,7 @@ div#discord-spotify p {
 
 span#spotify-bar {
   margin: 5px;
-  margin-top: 45px;
+  margin-top: 10px;
 
   width: calc(100% - 20px);
   height: 5px;
@@ -153,10 +153,6 @@ span#spotify-bar p {
 
   div#discord-about img {
     border-bottom: 4px solid;
-  }
-
-  span#spotify-bar {
-    margin-top: 10px;
   }
 
   span#spotify-bar p:last-child {

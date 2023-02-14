@@ -46,7 +46,7 @@ function setupBasicInfo({ discord_user, discord_status, activities }) {
   const colorCodes = {
     online: '#30d158',
     offline: '#8e8e93',
-    idle: '#ffd60a',
+    idle: '#ffb005',
     dnd: '#ff453a',
   };
 
@@ -59,14 +59,15 @@ function setupBasicInfo({ discord_user, discord_status, activities }) {
     }
   }
 
+  const discordElement = document.getElementById("discord-about");
   const usernameElement = document.getElementById('discord-username');
   const avatarElement = document.getElementById('discord-avatar');
   const statusElement = document.getElementById('discord-status');
 
   usernameElement.innerText = `${username}#${discriminator}`;
   statusElement.innerText = status;
-  avatarElement.src = `https://cdn.discordapp.com/avatars/${DISCORD_ID}/${avatar}.webp?size=256`;
-  avatarElement.style.borderColor = colorCodes[discord_status];
+  avatarElement.src = `https://cdn.discordapp.com/avatars/${DISCORD_ID}/${avatar}.webp?size=128`;
+  discordElement.style.background = `linear-gradient(90deg, ${colorCodes[discord_status]}86, #ffffff00)`;
 }
 
 function setupSpotify({ listening_to_spotify, spotify }) {
@@ -101,9 +102,9 @@ function setupSpotify({ listening_to_spotify, spotify }) {
     const current = new Date().getTime() - timestamps.start;
     const percent = Math.round((current / duration) * 100);
 
-    spotifyBar.style.background = `linear-gradient(135deg, #1ed760 ${percent}%, #ffffff calc(${percent}% + 1px)`;
+    spotifyBar.style.background = `linear-gradient(90deg, #fff ${percent}%, #77777796 ${percent}%`;
     spotifyCurrentTime.innerText = convertToTimeString(current);
-  }, 100);
+  }, 500);
 }
 
 function convertToTimeString(date) {

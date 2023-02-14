@@ -59,7 +59,7 @@ function setupBasicInfo({ discord_user, discord_status, activities }) {
     }
   }
 
-  const discordElement = document.getElementById("discord-about");
+  const discordElement = document.getElementById('discord-about');
   const usernameElement = document.getElementById('discord-username');
   const avatarElement = document.getElementById('discord-avatar');
   const statusElement = document.getElementById('discord-status');
